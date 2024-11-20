@@ -40,7 +40,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - user_1@example.com
+          - ivan@codemagic.io
           - user_2@example.com
         notify:
           success: true
@@ -99,11 +99,11 @@ workflows:
     publishing:
       email:
         recipients:
-          - user_1@example.com
+          - ivan@codemagic.io
           - user_2@example.com
         notify:
           success: true
-          failure: false
+          failure: true
       app_store_connect:
         auth: integration
 
