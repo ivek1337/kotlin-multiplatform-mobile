@@ -93,8 +93,8 @@ workflows:
           cd $CM_BUILD_DIR/iosApp
           xcodebuild \
             -project "$XCODE_PROJECT" \
-            -scheme "$XCODE_SCHEME" \
-            -showBuildSettings
+            -scheme "$XCODE_SCHEME"
+#            -showBuildSettings
 #          xcode-project build-ipa \
 #            --project "$XCODE_PROJECT" \
 #            --scheme "$XCODE_SCHEME"
