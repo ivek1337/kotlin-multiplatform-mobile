@@ -91,9 +91,16 @@ workflows:
       - name: Build ipa for distribution
         script: |
           cd $CM_BUILD_DIR/iosApp
-          xcode-project build-ipa \
+          xcodebuild clean build \
             --workspace "$XCODE_WORKSPACE" \
-            --scheme "$XCODE_SCHEME"
+            --scheme "$XCODE_SCHEME" \
+            -configuration Release \
+            -sdk iphoneos \
+            | tee build.log | xcpretty
+#          cd $CM_BUILD_DIR/iosApp
+#          xcode-project build-ipa \
+#            --workspace "$XCODE_WORKSPACE" \
+#            --scheme "$XCODE_SCHEME"
     artifacts:
       - iosApp/build/ios/ipa/*.ipa
     publishing:
