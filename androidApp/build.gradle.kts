@@ -16,7 +16,7 @@ android {
     compileSdk = 31
     val appVersionCode = (System.getenv()["NEW_BUILD_NUMBER"] ?: "1")?.toInt()
     defaultConfig {
-        applicationId = "com.codemagickmm.android"
+        applicationId = "io.codemagic.ivan.kmm"
         minSdk = 21
         targetSdk = 31
         versionCode = appVersionCode
