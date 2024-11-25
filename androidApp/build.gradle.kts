@@ -8,14 +8,8 @@ val keystoreProperties =
         }
 
 plugins {
-//    id("com.android.application")
-//    kotlin("android")
-    id("com.android.application").version("8.1.0").apply(false)
-    id("com.android.library").version("8.1.0").apply(false)
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin").version("2.0.1").apply(false)
-    kotlin("android").version("1.9.10").apply(false)
-    kotlin("multiplatform").version("1.9.10").apply(false)
-    kotlin("plugin.serialization").version("1.9.10").apply(false)
+    id("com.android.application")
+    kotlin("android")
 }
 
 android {
