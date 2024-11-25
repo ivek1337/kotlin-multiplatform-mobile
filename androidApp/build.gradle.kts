@@ -9,7 +9,8 @@ val keystoreProperties =
 
 plugins {
     id("com.android.application")
-    kotlin("android")
+    kotlin("jvm") version "1.9.10" // Specify your desired Kotlin version here
+    //kotlin("android")
 }
 
 android {
