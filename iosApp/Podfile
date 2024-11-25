@@ -3,9 +3,9 @@
 
 target 'iosApp' do
   # Comment the next line if you don't want to use dynamic  frameworks
-  #use_frameworks!
+  use_frameworks!
 
   # Pods for Runner
   pod 'Alamofire'
-  pod 'Capacitor'
+  pod 'Capacitor', :path => '../node_modules/@capacitor/ios'
 end
