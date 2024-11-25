@@ -76,6 +76,14 @@ workflows:
         script: | 
           cd $CM_BUILD_DIR/iosApp
           pod install
+      - name: Set up key.properties
+        script: | 
+          cat >> "$CM_BUILD_DIR/androidApp/key.properties" <<EOF
+          storePassword=$CM_KEYSTORE_PASSWORD
+          keyPassword=$CM_KEY_PASSWORD
+          keyAlias=$CM_KEY_ALIAS
+          storeFile=$CM_KEYSTORE_PATH
+          EOF    
       - name: Set up code signing settings on Xcode project
         script: |
           cd $CM_BUILD_DIR/iosApp
