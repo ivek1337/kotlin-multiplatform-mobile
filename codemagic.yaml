@@ -105,7 +105,7 @@ workflows:
           xcodebuild \
             -project "$XCODE_PROJECT" \
             -scheme "$XCODE_SCHEME" \
-            --scan
+            -showBuildSettings
 #|| echo "Build failed, but continuing..."
 #      - name: Build ipa for distribution
 #        script: |
