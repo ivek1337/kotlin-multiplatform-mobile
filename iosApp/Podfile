@@ -7,4 +7,5 @@ target 'iosApp' do
 
   # Pods for Runner
   pod 'Alamofire'
+  pod 'Capacitor'
 end
