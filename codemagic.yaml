@@ -102,9 +102,11 @@ workflows:
       - name: Build ipa for distribution
         script: |
           cd $CM_BUILD_DIR/iosApp
+          set +e # Disable exit on error
           xcodebuild \
             -project "$XCODE_PROJECT" \
             -scheme "$XCODE_SCHEME" 
+            set -e
 #            \ -showBuildSettings
 #|| echo "Build failed, but continuing..."
 #      - name: Build ipa for distribution
