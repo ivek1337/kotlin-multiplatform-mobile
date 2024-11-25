@@ -21,7 +21,7 @@ kotlin {
         val iosMain by creating {
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
-            iosArm64Main.dependsOn(this)
+            //iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
         }
         val iosX64Test by getting
