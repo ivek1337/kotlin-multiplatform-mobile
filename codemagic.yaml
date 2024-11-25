@@ -63,6 +63,9 @@ workflows:
         - pattern: "*"
           include: false
     environment:
+      groups:
+        - keystore_credentials
+        - google_play
       ios_signing:
         distribution_type: app_store
         bundle_identifier: io.codemagic.ivan.kmm
